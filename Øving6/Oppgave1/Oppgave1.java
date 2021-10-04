@@ -10,7 +10,7 @@ public class Oppgave1 {
 
     public static void main(String[] args) {
 
-        int runder = 10000;
+        int runder = 1000;
         for (int i = 0; i < runder; i++) {
             int tall = random.nextInt(scope);
             antall[tall]++;

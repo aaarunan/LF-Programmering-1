@@ -1,15 +1,12 @@
 package Oppgave2;
-
-import java.util.Arrays;
-import java.util.Collections;
-
-import static java.lang.Character.toUpperCase;
+import java.util.*;
 
 public class TekstAnalyse {
     int[] antallTegn = new int[30];
-    private String alfabetet = "ABCDEFGHIJKLMNOPQRSTUVWXYZÆØÅ";
+    private final String alfabetet = "ABCDEFGHIJKLMNOPQRSTUVWXYZÆØÅ";
 
     public void Analyser(String input) {
+        System.out.println(input.length());
         input = input.toUpperCase();
         for (int i = 0; i < input.length(); i++) {
             int value = FinnVerdi(input.charAt(i));
@@ -19,7 +16,6 @@ public class TekstAnalyse {
                 this.antallTegn[29]++;
             }
         }
-        System.out.println(Arrays.toString(this.antallTegn));
     }
 
     private int FinnVerdi(char bokstav) {
@@ -35,8 +31,8 @@ public class TekstAnalyse {
 
     public int FinnAntallForskjellligeBokstaver() {
         int antall = 0;
-        for (int i = 0; i < this.antallTegn.length-1; i++) {
-            if (this.antallTegn[i] > 0){
+        for (int i = 0; i < this.antallTegn.length - 1; i++) {
+            if (this.antallTegn[i] > 0) {
                 antall++;
             }
         }
@@ -45,9 +41,9 @@ public class TekstAnalyse {
 
     public int FinnAntallBokstaver() {
         int antall = 0;
-        for (int i = 0; i < this.antallTegn.length-1; i++) {
-            if (this.antallTegn[i] > 0){
-                antall+= this.antallTegn[i];
+        for (int i = 0; i < this.antallTegn.length - 1; i++) {
+            if (this.antallTegn[i] > 0) {
+                antall += this.antallTegn[i];
             }
         }
         return antall;
@@ -55,7 +51,7 @@ public class TekstAnalyse {
 
     public double ProsentBokstaver() {
         double bokstaver = this.FinnAntallBokstaver();
-        return Math.round((bokstaver/((double)(bokstaver+this.antallTegn[29])))*100);
+        return Math.round((bokstaver / ((double) (bokstaver + this.antallTegn[29]))) * 100);
 
     }
 
@@ -63,6 +59,28 @@ public class TekstAnalyse {
         return this.antallTegn[FinnVerdi(bokstav)];
     }
 
+    public ArrayList<Character> FinnBokstavSomForekommerMest() {
+        int max = max(this.antallTegn);
+        ArrayList<Character> bokstaver = new ArrayList<Character>();
+        for (int i = 0; i < this.antallTegn.length-1; i++) {
+            if (max == this.antallTegn[i]) {
+                bokstaver.add(alfabetet.charAt(i));
+            }
+        }
+        return bokstaver;
+    }
 
-
+    private int max(int[] n) {
+        int max = 0;
+        int index = 0;
+        for (int j : n) {
+            if (j >= max) {
+                max = j;
+            }
+        }
+        return max;
+    }
 }
+
+
+

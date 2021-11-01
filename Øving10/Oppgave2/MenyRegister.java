@@ -11,6 +11,7 @@ public class MenyRegister {
     }
 
     public Matrett finnMatrettEtterNavn(String navn) {
+
         for (Matrett target : matRegister) {
             if (Objects.equals(target.getNavn(), navn)) {
                 return target;

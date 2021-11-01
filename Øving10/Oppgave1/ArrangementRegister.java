@@ -7,6 +7,7 @@ public class ArrangementRegister {
     public void leggTilArrangement(String navn, String sted, String arrangor, int type, long meta) {
         arrangementer.add(new Arrangement(navn, sted, arrangor, type, meta));
     }
+
     public String fjernArrangement(String navn) {
 
         for (int i = 0; i < arrangementer.size(); i++) {
@@ -74,6 +75,14 @@ public class ArrangementRegister {
         Comparator<Arrangement> sorterEtterSted = Comparator.comparing(Arrangement::getSted);
         targets.sort(sorterEtterSted);
         return targets;
+    }
+
+
+    public List<Arrangement> sort(List<Arrangement> targets) {
+        Comparator<Arrangement> sorter = Comparator.comparing(Arrangement::getSted).thenComparing(Arrangement::getType).thenComparing(Arrangement::getMeta);
+        targets.sort(sorter);
+        return targets;
+
     }
 
     public boolean ifExists(String name) {

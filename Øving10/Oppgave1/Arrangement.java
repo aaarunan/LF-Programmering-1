@@ -35,8 +35,9 @@ public class Arrangement {
         return type;
     }
 
+    @Override
     public String toString() {
-        return "Navn: " + this.navn + ",    Sted: " + this.sted + ",    Dato (YYYYMMDDhhmm): " + this.meta;
+        return "Navn: " + this.navn + ",    Sted: " + this.sted + ",    Dato (YYYYMMDDhhmm): " + this.meta + " Type: " + this.getType();
     }
 
 

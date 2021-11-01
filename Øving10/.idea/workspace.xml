@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8cab0ca-6664-4a62-a5fc-a0a5697ef242" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Introduksjon til objekt-orientert programmering/.idea/description.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Introduksjon til objekt-orientert programmering/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Introduksjon til objekt-orientert programmering/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Introduksjon til objekt-orientert programmering/.idea/project-template.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Introduksjon til objekt-orientert programmering/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Introduksjon til objekt-orientert programmering/src/com/company/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Introduksjon til objekt-orientert programmering/Øving5.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Øving4/Øving4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Øving4/Øving4.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oppgave1/ArrangementRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oppgave1/ArrangementRegister.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

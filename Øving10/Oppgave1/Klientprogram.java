@@ -17,7 +17,7 @@ public class Klientprogram {
         arrangementRegister.setTypeListe(typeListe);
         arrangementRegister.leggTilArrangement("Alan Walker", "Dødens dal", "UKA", 0, 202120101900L);
         arrangementRegister.leggTilArrangement("Rave m/Abakus og Online", "The Mint", "Thilde", 1, 202121112200L);
-        arrangementRegister.leggTilArrangement("UKAtech", "Dødens dal", "UKA", 2, 202020101900L);
+        arrangementRegister.leggTilArrangement("UKAtech", "Dødens dal", "UKA", 2, 202020101800L);
 
         Scanner in = new Scanner(System.in);
 
@@ -69,17 +69,7 @@ public class Klientprogram {
             }
 
             case 5 -> {
-                System.out.println("1. sted");
-                System.out.println("2. Dato");
-                System.out.println("3. type");
-                switch (in.nextInt()) {
-                    case 1 -> skrivUtArray(arrangementRegister.sortSted(arrangementRegister.arrangementer));
-
-                    case 2 -> skrivUtArray(arrangementRegister.sortTime(arrangementRegister.arrangementer));
-
-                    case 3 -> skrivUtArray(arrangementRegister.sortType(arrangementRegister.arrangementer));
-
-                }
+                skrivUtArray(arrangementRegister.sort(arrangementRegister.arrangementer));
             }
 
             case 6 -> {
